@@ -47,10 +47,23 @@
 #         arg3 = float(input('Введите число 3: '))
 #     except ValueError:
 #         return
-#         min_arg = min(arg1, arg2, arg3)
-#         sum_arg = sum(arg1, arg2, arg3)
-#         sum_max = sum_arg - min_arg
+#     min_arg = min(arg1, arg2, arg3)
+#     sum_arg = sum(arg1, arg2, arg3)
+#     sum_max = sum_arg - min_arg
 #         return sum_max
+# sum_max = my_func
+# print(my_func())
+
+# or
+
+# def my_func():
+#     arg1 = float(input('Введите число 1: '))
+#     arg2 = float(input('Введите число 2: '))
+#     arg3 = float(input('Введите число 3: '))
+#
+#     spisok = [arg1, arg2, arg3]
+#     sum_max = sum(spisok) - min(spisok)
+#     return sum_max
 # sum_max = my_func
 # print(my_func())
 
@@ -68,6 +81,22 @@
 #     return arg
 # print(my_func())
 
+# 5. Программа запрашивает у пользователя строку чисел, разделённых пробелом. При нажатии Enter должна выводиться
+# сумма чисел. Пользователь может продолжить ввод чисел, разделённых пробелом и снова нажать Enter. Сумма вновь введённых
+# чисел будет добавляться к уже подсчитанной сумме.
+# Но если вместо числа вводится специальный символ, выполнение программы завершается. Если специальный символ введён после
+# нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной ранее сумме и после этого завершить программу.
 
 
+
+# 6. Реализовать функцию int_func(), принимающую слова из маленьких латинских букв и возвращающую их же, но с прописной
+# первой буквой. Например, print(int_func(‘text’)) -> Text.
+
+def int_func():
+    input_text = input('Веведите текст: ')
+    text = input_text.title
+    return text
+
+text = int_func()
+print(int_func())
 
