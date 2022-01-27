@@ -33,7 +33,6 @@ name, f_name, year_birth, city, email, phone = inform_data()
 print(f"Имя: {name}; Фамилия: {f_name}; Год рождения: {year_birth}; Город проживания: {city}; e-mail: {email}; "
       f"Номер телефона: {phone}")
 
-
 # 3. Реализовать функцию my_func(), которая принимает три позиционных аргумента и возвращает сумму наибольших двух
 # аргументов.
 
@@ -84,16 +83,39 @@ print(my_func())
 # Но если вместо числа вводится специальный символ, выполнение программы завершается. Если специальный символ введён после
 # нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной ранее сумме и после этого завершить программу.
 
-
+def my_spisok():
+    try:
+        arg = int(input('Введите набор положительных числен разделенных пробелом: '))
+        arg = arg.split()
+    except ValueError:
+        return
+    for el in arg:
+        if el == "N":
+            retun sum_spiska
+            print('Ошибка ввода')
+        else:
+        sum_spiska = sum(arg)
+        return sum_spiska
+sum_spiska = my_spisok
+print(my_spisok())
 
 # 6. Реализовать функцию int_func(), принимающую слова из маленьких латинских букв и возвращающую их же, но с прописной
 # первой буквой. Например, print(int_func(‘text’)) -> Text.
 
 def int_func():
     input_text = input('Веведите текст: ')
-    text = input_text.title
+    text = input_text.capitalize()
     return text
 
-text = int_func()
 print(int_func())
 
+# 7. Продолжить работу над заданием. В программу должна попадать строка из слов, разделённых пробелом. Каждое слово
+# состоит из латинских букв в нижнем регистре. Нужно сделать вывод исходной строки, но каждое слово должно начинаться
+# с заглавной буквы. Используйте написанную ранее функцию int_func().
+
+def int_func():
+    input_text = input('Веведите текст: ')
+    text = input_text.title()
+    return text
+
+print(int_func())
